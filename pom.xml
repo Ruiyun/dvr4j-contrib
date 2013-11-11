@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>dvr4j</groupId>
+	<artifactId>dvr4j-contrib</artifactId>
+	<name>dvr4j-contrib</name>
+    <description>各个主要DVR厂商SDK的二进制文件</description>
+    <url>http://github.com/Ruiyun/dvr4j-contrib</url>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+
+    <licenses>
+        <license>
+            <name>Eclipse Public License</name>
+            <url>http://www.eclipse.org/legal/epl-v10.html</url>
+        </license>
+    </licenses>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.5</maven.compiler.source>
+		<maven.compiler.target>1.5</maven.compiler.target>
+	</properties>
+
+    <scm>
+        <connection>scm:git:git://github.com/Ruiyun/dvr4j-contrib.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/Ruiyun/dvr4j-contrib.git</developerConnection>
+        <url>https://github.com/Ruiyun/dvr4j-contrib</url>
+        <tag>HEAD</tag>
+    </scm>
+	
+	<build>
+        <sourceDirectory>src</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>lib</directory>
+            </resource>
+        </resources>
+        <directory>target/</directory>
+        <outputDirectory>target/classes</outputDirectory>
+	</build>
+	<repositories>
+        <repository>
+            <id>clojars</id>
+            <url>https://clojars.org/repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+	</repositories>
+</project>
+
+
+
+
+
