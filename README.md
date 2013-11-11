@@ -8,12 +8,12 @@ dvr4j
 
 leiningen:
 
-    [dvr4j-contrib "1.0"]
+    [com.ruiyun.dvr4j/dvr4j-contrib "1.0"]
 
 maven:
 
     <dependency>
-      <groupId>dvr4j</groupId>
+      <groupId>com.ruiyun.dvr4j</groupId>
       <artifactId>dvr4j-contrib</artifactId>
       <version>1.0</version>
     </dependency>
