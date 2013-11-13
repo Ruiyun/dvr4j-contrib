@@ -9,6 +9,12 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <licenses>
         <license>
             <name>Eclipse Public License</name>
@@ -21,6 +27,14 @@
 		<maven.compiler.source>1.5</maven.compiler.source>
 		<maven.compiler.target>1.5</maven.compiler.target>
 	</properties>
+
+    <developers>
+        <developer>
+            <id>ruiyun</id>
+            <name>Ruiyun Wen</name>
+            <email>ruiyun.wen@gmail.com</email>
+        </developer>
+    </developers>
 
     <scm>
         <connection>scm:git:git://github.com/Ruiyun/dvr4j-contrib.git</connection>
@@ -38,7 +52,38 @@
         </resources>
         <directory>target/</directory>
         <outputDirectory>target/classes</outputDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
 	</build>
+
+    <distributionManagement>
+        <!-- use the following if you're not using a snapshot version. -->
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Sonatype repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <!-- use the following if you ARE using a snapshot version. -->
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
 
 
